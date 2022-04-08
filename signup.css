@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #2f1c53, #a46dff, #f6d1fd);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  justify-content: left;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+  height: 500px;
+  width: 1000px;
+}
+
+form {
+  width: 500px;
+  padding-left: 2rem;
+}
+
+.form-container {
+  background: linear-gradient(-45deg, #2f1c53, #a46dff, #f6d1fd);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.photo {
+  height: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.header {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: black;
+  color: rgb(20, 105, 155);
+}
+
+label {
+  margin-right: 10px;
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+  width: 20%;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: left;
+  float: left;
+}
+input {
+  height: 1.8rem;
+  width: 60%;
+  border: 1px solid #000;
+  margin-top: 10px;
+  border-radius: 0.5rem;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  text-indent: 0.5rem;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+span {
+  color: #ff0000;
+  font-size: 13px;
+  left: 25%;
+}
+
+textarea {
+  height: 3.8rem;
+  width: 60%;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  vertical-align: top;
+  border: 1px solid #000;
+  margin-top: 10px;
+  border-radius: 0.5rem;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  text-indent: 0.5rem;
+  font-size: 13px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.button {
+  position: absolute;
+  right: 25%;
+  background-color: black;
+  border: none;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 10rem;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(117, 113, 122, 0.7);
+}
+
+.error {
+  height: 1px;
+  position: relative;
+  color: rgb(224, 0, 0);
+}

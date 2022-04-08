@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="signup.js"></script>
+    <script src="Untitled-1.js"></script>
+    <link rel="stylesheet" href="signup.css" />
+    <!-- css file-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Signup Form</title>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <div>
+        <img src="tti.png" alt="logo" class="photo" />
+      </div>
+      <div class="form-container">
+        <h1 class="header">Timing Technologies</h1>
+        <form name="myform" onsubmit="event.preventDefault()">
+          <div>
+            <label>Name<span>*</span>:</label>
+            <input type="text" id="name" name="name" maxlength="40" /><br />
+            <span id="errorname" class="error"></span><br />
+          </div>
+          <div>
+            <label>Email<span>*</span>:</label>
+            <input type="text" id="email" name="email" maxlength="40" /><br />
+            <span id="errormail" class="error"></span><br />
+          </div>
+          <div>
+            <label>Phone<span>*</span>:</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              maxlength="10"
+              onkeypress="return isNumber(event)"
+            /><br />
+            <span id="errorphone" class="error"></span><br />
+          </div>
+          <div>
+            <label>PIN:</label>
+            <input
+              type="text"
+              id="PIN"
+              maxlength="6"
+              onkeypress="return isNumber(event)"
+            /><br />
+            <span id="errorpin" class="error"></span><br />
+          </div>
+          <div>
+            <label>Address:</label>
+            <textarea
+              type="text"
+              id="address"
+              class="address"
+              maxlength="100"
+            ></textarea
+            ><br /><br />
+          </div>
+          <button class="button" id="submitForm" onclick="validation()">
+            Register
+          </button>
+          <p></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
