@@ -12,7 +12,9 @@ function validation() {
   }
   if (email == "") {
     document.getElementById("errormail").innerHTML = "*Email cannot be empty";
+
   } else if (
+    //it is better to save regex in a variable and use that inside a conditional statement
     !email.match(
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     )
@@ -53,6 +55,8 @@ function validation() {
 
   data.length ? alert(data) : !alert();
 }
+
+// Need Correcting: after updating input type to number you can remove bellow function
 
 function isNumber(evt) {
   evt = evt ? evt : window.event;
