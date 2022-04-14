@@ -5,6 +5,8 @@ function validation() {
   let pin = document.getElementById("PIN").value;
   let address = document.getElementById("address").value;
   let data = JSON.stringify({ name, email, phone, pin, address });
+  let emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (name == "") {
     document.getElementById("errorname").innerHTML = "*Name cannot be empty";
   } else {
@@ -12,12 +14,9 @@ function validation() {
   }
   if (email == "") {
     document.getElementById("errormail").innerHTML = "*Email cannot be empty";
-
   } else if (
     //it is better to save regex in a variable and use that inside a conditional statement
-    !email.match(
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )
+    !email.match(emailRegex)
   ) {
     document.getElementById("errormail").innerHTML =
       "*Please enter a valid email address";
@@ -43,9 +42,7 @@ function validation() {
   if (
     name == "" ||
     email == "" ||
-    !email.match(
-      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-    ) ||
+    !email.match(emailRegex) ||
     phone == "" ||
     isNaN(phone) ||
     phone.length != 10
@@ -54,15 +51,4 @@ function validation() {
   }
 
   data.length ? alert(data) : !alert();
-}
-
-// Need Correcting: after updating input type to number you can remove bellow function
-
-function isNumber(evt) {
-  evt = evt ? evt : window.event;
-  var charCode = evt.which ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-    return false;
-  }
-  return true;
 }
