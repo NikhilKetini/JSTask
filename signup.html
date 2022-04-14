@@ -33,25 +33,22 @@
           </div>
           <div>
             <label>Phone<span>*</span>:</label>
-            <!-- Need Correcting: for  number input  pass type as number and avoid onkeypress attribute. Refer this for more details:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
-            <!-- Need Correcting: You should only return a statement inside a function  -->
-
             <input
-              type="text"
+              type="number"
               id="phone"
               name="phone"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               maxlength="10"
-              onkeypress="return isNumber(event)"
             /><br />
             <span id="errorphone" class="error"></span><br />
           </div>
           <div>
             <label>PIN:</label>
             <input
-              type="text"
+              type="number"
               id="PIN"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               maxlength="6"
-              onkeypress="return isNumber(event)"
             /><br />
             <span id="errorpin" class="error"></span><br />
           </div>
